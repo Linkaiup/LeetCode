@@ -24,6 +24,7 @@ public class Solution {
         return null;
     }
 
+    //借鉴大佬的方法
     public int[] twoSumB(int[] nums, int target) {
         int length = nums.length;
         Map<Integer,Integer> map = new HashMap<>(length);
