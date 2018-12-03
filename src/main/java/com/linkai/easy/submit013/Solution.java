@@ -1,6 +1,8 @@
 package com.linkai.easy.submit013;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by K Lin
@@ -39,5 +41,10 @@ public class Solution {
     public static void main(String[] args) {
         String roman = "XXVII";
         System.out.println(romanToInt(roman));
+        List Listlist1 = new ArrayList();
+        Listlist1.add(0);
+        List Listlist2 = Listlist1;
+        System.out.println(Listlist1.get(0) instanceof Integer);
+        System.out.println(Listlist2.get(0) instanceof Integer);
     }
 }

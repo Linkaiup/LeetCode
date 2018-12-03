@@ -20,4 +20,14 @@ public class Solution {
         }
         return new ArrayList<>(res);
     }
+
+    public static void main(String[] args) {
+        String a = "1111";
+        String b = new Integer(1111).toString();
+        if (a.equals(b)){
+            System.out.println("yes");
+        }else {
+            System.out.println("false");
+        }
+    }
 }
