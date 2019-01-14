@@ -44,6 +44,8 @@ public class Solution {
         if (left!=0){
             sum--;
         }
+        Integer integer = 1;
+        Integer integer1 = Integer.valueOf(i);
         return (sum+sum2)*2;
     }
 
