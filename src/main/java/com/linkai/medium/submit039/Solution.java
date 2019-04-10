@@ -1,9 +1,5 @@
 package com.linkai.medium.submit039;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * @ClassName: Solution
  * @Description: TODO
@@ -13,27 +9,44 @@ import java.util.List;
  * Remember to sow in the spring.
  **/
 public class Solution {
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> listAll=new ArrayList<List<Integer>>();
-        List<Integer> list=new ArrayList<Integer>();
-        //排序
-        Arrays.sort(candidates);
-        find(listAll,list,candidates,target,0);
-        return listAll;
+    static class ListNode{
+        int value;
+        ListNode next;
     }
-    public void find(List<List<Integer>> listAll,List<Integer> tmp,int[] candidates, int target,int num){
-        //递归的终点
-        if(target==0){
-            listAll.add(tmp);
+
+    public static void reserve(ListNode head){
+        if(head==null){
             return;
+        }else{
+            ListNode preNode = head;
+            ListNode nowNode = head;
+            ListNode nextNode = head.next;
+            while(nextNode!=null){
+                nowNode = nextNode;
+                nextNode = nowNode.next;
+                nowNode.next = preNode;
+                preNode = nowNode;
+            }
+
         }
-        if(target<candidates[0]) return;
-        for(int i=num;i<candidates.length&&candidates[i]<=target;i++){
-            //深拷贝
-            List<Integer> list=new ArrayList<>(tmp);
-            list.add(candidates[i]);
-            //递归运算，将i传递至下一次运算是为了避免结果重复。
-            find(listAll,list,candidates,target-candidates[i],i);
+    }
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        ListNode nodeList = new ListNode();
+        nodeList.value=1;
+        for(int i =0;i<6;i++){
+            nodeList.next=new ListNode();
+            nodeList.value=i;
         }
+        while(nodeList!=null){
+            System.out.println(nodeList.value);
+            nodeList=nodeList.next;
+        }
+        reserve(nodeList);
+        while(nodeList!=null) {
+            System.out.println(nodeList.value);
+            nodeList = nodeList.next;
+        }
+
     }
 }

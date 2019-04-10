@@ -30,7 +30,7 @@ public class Solution {
                 if (num != '.') {
                     int n = (int)num;
                     int box_index = (i / 3 ) * 3 + j / 3;
-
+                    
                     // keep the current cell value
                     rows[i].put(n, rows[i].getOrDefault(n, 0) + 1);
                     columns[j].put(n, columns[j].getOrDefault(n, 0) + 1);

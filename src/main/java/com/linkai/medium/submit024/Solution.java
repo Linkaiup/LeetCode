@@ -33,4 +33,34 @@ public class Solution {
 
         return dummy.next; //head
     }
+
+    public static void main(String[] args) {
+        int n = 8;
+        int temp = n*2;
+        //项数
+        int fir=2;
+        //首加末
+        int sec=3;
+        //判断是不是左起:0右起，1左起
+        int flag=0;
+        for (;fir*sec<temp;){
+            fir++;
+            sec++;
+        }
+        fir-=1;
+        sec-=1;
+        if (fir%2==1){
+            flag=1;
+        }
+        n = n-(fir*sec/2);
+        int row,lie;
+        if (flag==1){
+            row = sec-n+1;
+            lie = n;
+        }else {
+            row = n;
+            lie = sec-n+1;
+        }
+        System.out.println(row + " " + lie);
+    }
 }
