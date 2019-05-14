@@ -54,7 +54,8 @@ public class HeapSort {
     private void maxHeapify(int index,int len){
         int li = (index<<1)+1;
         int ri = li+1;
-        int cMax = li; //子节点值最大索引，默认左子节点
+        //子节点值最大索引，默认左子节点
+        int cMax = li;
 
         //如果大于数组长度范围，则返回
         if (li>len)return;
