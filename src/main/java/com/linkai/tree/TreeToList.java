@@ -18,14 +18,11 @@ public class TreeToList {
     }
     static TreeNode head = null;
     static TreeNode realHead = null;
-    public static TreeNode Convert(TreeNode pRoot){
-        CovertSub(pRoot);
-        return realHead;
-    }
-    private static void CovertSub(TreeNode pRoot){
+
+    private static void ConvertNode(TreeNode pRoot){
         if (pRoot==null)
             return;
-        CovertSub(pRoot.left);
+        ConvertNode(pRoot.left);
         if (head==null){
             head=pRoot;
             realHead=pRoot;
@@ -34,7 +31,7 @@ public class TreeToList {
             pRoot.left = head;
             head=pRoot;
         }
-        CovertSub(pRoot.right);
+        ConvertNode(pRoot.right);
     }
 
     public static void main(String[] args) {
@@ -44,7 +41,7 @@ public class TreeToList {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
-        TreeNode newNode = Convert(root);
+        TreeNode newNode = ConvertNode(root);
         System.out.println(newNode.val+"+"+newNode.right.val);
     }
 }
