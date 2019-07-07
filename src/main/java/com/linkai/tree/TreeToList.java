@@ -41,7 +41,6 @@ public class TreeToList {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
-        TreeNode newNode = ConvertNode(root);
-        System.out.println(newNode.val+"+"+newNode.right.val);
+        System.out.println(realHead.val+"+"+realHead.right.val);
     }
 }

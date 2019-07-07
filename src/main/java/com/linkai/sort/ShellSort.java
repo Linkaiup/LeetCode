@@ -30,6 +30,10 @@ public class ShellSort {
                 //交换第二步
                 array[j+number] = temp;
             }
+            for (int x =0;x<array.length;x++) {
+                System.out.print(array[x]);
+            }
+            System.out.println();
             //得出新步长
             number = number/2;
         }
