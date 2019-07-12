@@ -1,7 +1,6 @@
 package com.linkai.getTheOffer;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -16,19 +15,18 @@ public class FindDuplicateNum {
     public static void main(String[] args) {
         int[] array = new int[]{2,3,1,2,0,0,1,4};
         int size = array.length;
-        int now=0,temp =0;
+        int now=0,why=0,temp =0;
         ArrayList duplicate = new ArrayList();
-        HashMap map = new HashMap();
-        int i = 0;
-        for (i = 0;i<size;i++){
-            now = array[i];
-            if (now!=i) {
+        for (why = 0;why<size;why++){
+            now = array[why];
+            if (now!=why) {
                 temp = array[now];
                 if (temp==now){
                     duplicate.add(now);
                 }else {
                     array[now] = now;
-                    array[i] = temp;
+                    array[why] = temp;
+                    why--;
                 }
             }
         }

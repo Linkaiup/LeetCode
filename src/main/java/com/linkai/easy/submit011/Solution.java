@@ -21,10 +21,12 @@ public class Solution {
         }
         return maxarea;
     }
-
     public static void main(String[] args) {
         int[] height = {2, 3, 10, 5, 7, 8, 9};
         int result = maxArea(height);
         System.out.println("the max Container is :" + result);
+        double d1=-0.5;
+        System.out.println("Ceil d1="+Math.ceil(d1));
+        System.out.println("floor d1="+Math.floor(d1));
     }
 }
