@@ -12,6 +12,9 @@ import com.linkai.tree.TreeNode;
  **/
 public class RebuildTree {
     public TreeNode reConstructBinaryTree(int[] pre,int[] in){
+        Object o = new Object();
+        o.hashCode();
+        o.equals(o);
         TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
         return root;
     }
