@@ -1,6 +1,7 @@
 package com.linkai.getTheOffer;
 
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @ClassName: FindDuplicateNum
@@ -30,6 +31,6 @@ public class FindDuplicateNum {
             }
         }
         System.out.println(duplicate.toString());
-
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
     }
 }
