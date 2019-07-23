@@ -1,5 +1,7 @@
 package com.linkai.tree;
 
+import java.util.List;
+
 /**
  * @ClassName: TreeNode
  * @Description: TODO
@@ -12,5 +14,6 @@ public class TreeNode {
     public int val;
     public TreeNode left;
     public TreeNode right;
+    public List<TreeNode> children;
     public TreeNode(int x) { val = x; }
 }
