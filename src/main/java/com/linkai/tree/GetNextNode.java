@@ -14,7 +14,7 @@ public class GetNextNode {
         TreeNode left;
         TreeNode right;
         TreeNode parent;
-        TreeNode(int x) { val = x; }
+        TreeNode(int x) { this.val = x; }
     }
     public static TreeNode getNextNode(TreeNode node){
         if (node==null)
