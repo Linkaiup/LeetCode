@@ -21,13 +21,17 @@ public class GetNextNode {
             return null;
         TreeNode next=new TreeNode(0);
         if (node.right!=null){
+            //拿右节点
             TreeNode pRight = node.right;
+            //循环往下找最左节点
             while (pRight.left!=null)
                 pRight = pRight.left;
             next = pRight;
         }else if (node.parent!=null){
+            //往上找父节点
             TreeNode pCurrent = node;
             TreeNode pParent = node.parent;
+            //需要把右子节点都访问一遍，往上找那个点
             while (pParent!=null&&pCurrent==pParent.right){
                 pCurrent = pParent;
                 pParent = pParent.parent;
