@@ -1,6 +1,7 @@
 package com.linkai.getTheOffer;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -17,7 +18,7 @@ public class 最小的K个数 {
         if(k > length || k == 0){
             return result;
         }
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, (o1, o2) -> o2.compareTo(o1));
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, Comparator.reverseOrder());
         for (int i = 0; i < length; i++) {
             if (maxHeap.size() != k) {
                 maxHeap.offer(input[i]);

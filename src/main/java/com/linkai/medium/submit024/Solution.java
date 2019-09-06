@@ -9,9 +9,9 @@ package com.linkai.medium.submit024;
  * Remember to sow in the spring.
  **/
 public class Solution {
-    public class ListNode {
-        int val;
-        ListNode next;
+    static class ListNode {
+        public int val;
+        public ListNode next;
         ListNode(int x) { val = x; }
     }
     public ListNode swapPairs(ListNode head) {

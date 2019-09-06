@@ -65,7 +65,7 @@ public class HeapSort {
         //从下往上整理成最大堆
         if (array[cMax]>array[index]){
             swap(cMax,index);
-            //继续递归上去
+            //继续递归下去
             maxHeapify(cMax,len);
         }
     }
